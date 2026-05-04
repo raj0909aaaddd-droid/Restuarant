@@ -1,0 +1,1236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="https://d16ilfvy4mv02r.cloudfront.net/workspaces/eQVtuRFa5iEoVkvmqpCU6IjOKLV0gDZz/d9439b08-bdfa-4ed2-9308-442dd95da543/files/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spice Haven | Authentic Taste, Unforgettable Experience</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #c2410c;
+      --primary-light: #f97316;
+      --accent: #facc15;
+      --dark: #1c0f08;
+      --brown: #3b1f12;
+      --cream: #fff7ed;
+      --muted: #7c5f4b;
+      --white: #ffffff;
+      --glass: rgba(255, 247, 237, 0.12);
+      --shadow: 0 24px 70px rgba(28, 15, 8, 0.22);
+      --radius: 28px;
+      --transition: all 0.35s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 38px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 99px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      color: var(--brown);
+      margin-bottom: 18px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      font-size: 1.03rem;
+      max-width: 680px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary), #7c2d12);
+      z-index: -1;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      box-shadow: 0 16px 36px rgba(194, 65, 12, 0.38);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 48px rgba(194, 65, 12, 0.48);
+    }
+
+    .btn-primary:hover::before {
+      filter: brightness(1.12);
+      transform: scale(1.08);
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .btn-outline::before {
+      display: none;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-4px);
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition);
+      padding: 20px 0;
+    }
+
+    .navbar.scrolled {
+      padding: 12px 0;
+      background: rgba(28, 15, 8, 0.84);
+      backdrop-filter: blur(22px);
+      box-shadow: 0 16px 40px rgba(28, 15, 8, 0.22);
+    }
+
+    .nav-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-family: "Cinzel", serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 30% 30%, var(--accent), var(--primary-light), var(--primary));
+      box-shadow: 0 10px 30px rgba(249, 115, 22, 0.35);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: var(--transition);
+      border-radius: 99px;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(110deg, rgba(28, 15, 8, 0.9), rgba(61, 26, 12, 0.65), rgba(28, 15, 8, 0.55)),
+        url("https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 25%, rgba(249, 115, 22, 0.38), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(250, 204, 21, 0.22), transparent 28%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to top, var(--cream), transparent);
+    }
+
+    .hero-content {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding-top: 80px;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .hero h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(3.5rem, 9vw, 7.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.05em;
+      margin-bottom: 22px;
+      text-shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
+      animation: fadeUp 0.9s ease 0.12s both;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.35rem, 3vw, 2.35rem);
+      line-height: 1.25;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 680px;
+      margin-bottom: 34px;
+      animation: fadeUp 0.9s ease 0.24s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      animation: fadeUp 0.9s ease 0.36s both;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(22px);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      animation: floatCard 5s ease-in-out infinite;
+    }
+
+    .hero-card img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 22px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-card p {
+      font-family: "Inter", sans-serif;
+      font-size: 0.98rem;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-images {
+      position: relative;
+      min-height: 560px;
+    }
+
+    .about-img-main,
+    .about-img-small {
+      position: absolute;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .about-img-main {
+      width: 78%;
+      height: 500px;
+      left: 0;
+      top: 0;
+      border-radius: 36px;
+    }
+
+    .about-img-small {
+      width: 48%;
+      height: 280px;
+      right: 0;
+      bottom: 0;
+      border: 10px solid var(--cream);
+      border-radius: 32px;
+    }
+
+    .experience-badge {
+      position: absolute;
+      right: 28px;
+      top: 38px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: var(--white);
+      box-shadow: 0 20px 50px rgba(194, 65, 12, 0.36);
+      border: 8px solid var(--cream);
+      z-index: 2;
+    }
+
+    .experience-badge strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 2.6rem;
+      line-height: 1;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .feature {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(194, 65, 12, 0.12);
+      box-shadow: 0 18px 44px rgba(28, 15, 8, 0.07);
+      transition: var(--transition);
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 58px rgba(28, 15, 8, 0.12);
+    }
+
+    .feature-icon {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .feature h4 {
+      color: var(--brown);
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .menu-section {
+      background:
+        radial-gradient(circle at top left, rgba(249, 115, 22, 0.13), transparent 34%),
+        linear-gradient(180deg, #fff7ed 0%, #fff1df 100%);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .menu-card {
+      position: relative;
+      padding: 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(194, 65, 12, 0.13);
+      box-shadow: 0 20px 55px rgba(28, 15, 8, 0.08);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .menu-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.16), transparent 42%);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 30px 75px rgba(28, 15, 8, 0.16);
+      border-color: rgba(194, 65, 12, 0.28);
+    }
+
+    .menu-card:hover::before {
+      opacity: 1;
+    }
+
+    .menu-card img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 22px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 4px 6px;
+    }
+
+    .menu-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .menu-top h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--brown);
+      font-size: 1.45rem;
+      line-height: 1.15;
+    }
+
+    .price {
+      color: var(--primary);
+      font-weight: 900;
+      font-size: 1.12rem;
+      white-space: nowrap;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      grid-auto-rows: 230px;
+      gap: 18px;
+      margin-top: 48px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      box-shadow: 0 20px 50px rgba(28, 15, 8, 0.12);
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(5) {
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s ease;
+    }
+
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(28, 15, 8, 0.48), transparent 58%);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    .contact-section {
+      background:
+        linear-gradient(135deg, rgba(28, 15, 8, 0.92), rgba(59, 31, 18, 0.92)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat fixed;
+      color: var(--white);
+    }
+
+    .contact-section .section-title,
+    .contact-section .section-text {
+      color: var(--white);
+    }
+
+    .contact-section .section-text {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 40px;
+      align-items: stretch;
+      margin-top: 44px;
+    }
+
+    .contact-card,
+    .map-card {
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .contact-card {
+      padding: 34px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      flex: 0 0 auto;
+      box-shadow: 0 14px 30px rgba(249, 115, 22, 0.28);
+    }
+
+    .contact-item h4 {
+      font-size: 1.02rem;
+      margin-bottom: 4px;
+    }
+
+    .contact-item p {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      border: 0;
+      filter: saturate(1.1) contrast(1.05);
+    }
+
+    .footer {
+      background: #120904;
+      color: var(--white);
+      padding: 46px 0;
+      text-align: center;
+    }
+
+    .footer-logo {
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .socials a {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      transition: var(--transition);
+      font-weight: 900;
+    }
+
+    .socials a:hover {
+      background: var(--primary);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(194, 65, 12, 0.32);
+    }
+
+    .footer p {
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.94rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatCard {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-18px);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-content,
+      .about-wrap,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 520px;
+      }
+
+      .about-images {
+        min-height: 520px;
+      }
+
+      .features,
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(5) {
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .navbar {
+        padding: 14px 0;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 74px;
+        left: 20px;
+        right: 20px;
+        display: grid;
+        gap: 0;
+        background: rgba(28, 15, 8, 0.95);
+        backdrop-filter: blur(22px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 22px;
+        padding: 12px;
+        transform: translateY(-12px);
+        opacity: 0;
+        pointer-events: none;
+        transition: var(--transition);
+      }
+
+      .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav-links li a {
+        display: block;
+        padding: 14px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 130px 0 90px;
+      }
+
+      .hero-content {
+        padding-top: 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.2rem, 18vw, 5.4rem);
+      }
+
+      .hero-card img {
+        height: 230px;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .about-images {
+        min-height: 440px;
+      }
+
+      .about-img-main {
+        height: 390px;
+        width: 86%;
+      }
+
+      .about-img-small {
+        height: 210px;
+        width: 56%;
+      }
+
+      .experience-badge {
+        width: 124px;
+        height: 124px;
+        right: 8px;
+      }
+
+      .experience-badge strong {
+        font-size: 2.1rem;
+      }
+
+      .features,
+      .menu-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-auto-rows: 260px;
+      }
+
+      .contact-card {
+        padding: 24px;
+      }
+
+      .map-card iframe {
+        min-height: 340px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container,
+      .nav-inner,
+      .hero-content {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .menu-top {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo" aria-label="Spice Haven Home">
+        <span class="logo-mark">🔥</span>
+        <span>Spice Haven</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Visit Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <div>
+        <div class="hero-kicker">Kolkata’s Premium Dining Experience</div>
+        <h1>Spice <span>Haven</span></h1>
+        <p>Authentic Taste, Unforgettable Experience</p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">View Menu →</a>
+          <a href="#contact" class="btn btn-outline">Reserve a Table</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=85" alt="Premium Indian dish served beautifully">
+        <h3>Crafted with Fire, Fragrance & Soul</h3>
+        <p>Signature spices, elegant interiors, and chef-led recipes inspired by India’s timeless culinary heritage.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section about-section" id="about">
+      <div class="container about-wrap">
+        <div class="about-images reveal">
+          <img class="about-img-main" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=85" alt="Elegant restaurant interior">
+          <img class="about-img-small" src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=85" alt="Fresh ingredients and spices">
+          <div class="experience-badge">
+            <div>
+              <strong>12+</strong>
+              Years of Flavor
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Where premium ambiance meets honest flavor.</h2>
+          <p class="section-text">
+            At Spice Haven, every plate is built around freshness, balance, and unforgettable aroma.
+            We combine handpicked ingredients, slow-cooked gravies, artisan spices, and warm hospitality
+            to create a dining experience that feels luxurious yet deeply comforting.
+          </p>
+
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">🌿</div>
+              <h4>Fresh Ingredients</h4>
+              <p>Locally sourced produce and premium spices prepared daily.</p>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">🍽️</div>
+              <h4>Fine Ambiance</h4>
+              <p>Warm lighting, elegant seating, and a memorable dining mood.</p>
+            </div>
+
+            <div class="feature">
+              <div class="feature-icon">👨‍🍳</div>
+              <h4>Chef Crafted</h4>
+              <p>Recipes refined by expert chefs with authentic techniques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-label">Signature Menu</span>
+            <h2 class="section-title">Dishes guests come back for.</h2>
+          </div>
+          <p class="section-text">
+            A curated selection of rich curries, fragrant biryanis, flame-grilled kebabs,
+            and indulgent desserts made for unforgettable evenings.
+          </p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card reveal">
+            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85" alt="Butter Chicken">
+            <div class="menu-content">
+              <div class="menu-top">
+                <h3>Royal Butter Chicken</h3>
+                <span class="price">₹420</span>
+              </div>
+              <p>Smoky tandoori chicken simmered in a silky tomato-butter gravy.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=900&q=85" alt="Biryani">
+            <div class="menu-content">
+              <div class="menu-top">
+                <h3>Kolkata Mutton Biryani</h3>
+                <span class="price">₹520</span>
+              </div>
+              <p>Fragrant basmati rice, tender mutton, potato, saffron, and royal spices.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85" alt="Tandoori platter">
+            <div class="menu-content">
+              <div class="menu-top">
+                <h3>Tandoori Flame Platter</h3>
+                <span class="price">₹690</span>
+              </div>
+              <p>Assorted kebabs grilled over fire with mint chutney and salad.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Samosa chaat">
+            <div class="menu-content">
+              <div class="menu-top">
+                <h3>Crispy Samosa Chaat</h3>
+                <span class="price">₹210</span>
+              </div>
+              <p>Crushed samosas with yogurt, chutneys, sev, and masala dust.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=85" alt="Paneer curry">
+            <div class="menu-content">
+              <div class="menu-top">
+                <h3>Paneer Lababdar</h3>
+                <span class="price">₹360</span>
+              </div>
+              <p>Soft cottage cheese in a rich cashew-onion gravy with kasuri methi.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal">
+            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=85" alt="Indian dessert">
+            <div class="menu-content">
+              <div class="menu-top">
+                <h3>Saffron Gulab Jamun</h3>
+                <span class="price">₹180</span>
+              </div>
+              <p>Warm golden dumplings soaked in cardamom-saffron syrup.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Gallery</span>
+          <h2 class="section-title">A glimpse of the Spice Haven mood.</h2>
+          <p class="section-text">
+            From sizzling plates to intimate corners, every detail is designed to make your evening feel special.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85" alt="Freshly prepared food">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=85" alt="Chef preparing food">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=85" alt="Restaurant dining table">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=85" alt="Fresh salad plate">
+          </div>
+          <div class="gallery-item reveal">
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=85" alt="Restaurant atmosphere">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Visit Us</span>
+          <h2 class="section-title">Reserve your table tonight.</h2>
+          <p class="section-text">
+            Located in the heart of Kolkata, Spice Haven is ready to host your family dinners,
+            celebrations, date nights, and corporate gatherings.
+          </p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-card reveal">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <h4>Address</h4>
+                <p>24 Park Street, Near Allen Park, Kolkata, West Bengal 700016</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">☎</div>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">✉</div>
+              <div>
+                <h4>Email</h4>
+                <p>hello@spicehaven.in</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🕒</div>
+              <div>
+                <h4>Opening Hours</h4>
+                <p>Mon–Sun: 12:00 PM – 11:30 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-card reveal">
+            <iframe
+              title="Spice Haven Kolkata Map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Park%20Street%20Kolkata%20West%20Bengal%20700016&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="#home" class="logo footer-logo">
+        <span class="logo-mark">🔥</span>
+        <span>Spice Haven</span>
+      </a>
+
+      <div class="socials" aria-label="Social media links">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+
+      <p>© 2026 Spice Haven. All rights reserved. Crafted for unforgettable dining.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const revealElements = document.querySelectorAll(".reveal");
+
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 40);
+    });
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      menuToggle.textContent = navLinks.classList.contains("open") ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.86;
+
+      revealElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < triggerBottom) {
+          element.classList.add("active");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</body>
+</html>
